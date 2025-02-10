@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> The Seven Wonders of the Ancient World </title>
+        <style>
+
+
+            .container{
+                display: grid;
+                grid-template-areas: 
+                "h h h"
+                "n b b"
+                "f f f";
+                grid-template-columns: 1fr 5fr;
+                gap: 10px;
+                height:100vh;
+             
+        
+            }
+            header{
+                grid-area: h;
+                padding:20px;
+                
+                font-family:"Cinzel";
+                box-sizing: border-box;
+                background-color:#A7C7E7;
+                color: #FFF9F0; 
+                border-radius: 10px;
+                display: grid;
+                grid-template-columns: auto auto;
+                gap:45%;
+               
+                
+           
+                
+            }
+
+            .navigation{
+                grid-area: n;
+                padding:25px;
+                box-sizing: border-box;
+                background-color: #F7C8D2;
+                text-align: center;
+                border-radius: 10px;
+                
+                
+                
+              
+            }
+
+            .navigationitem{
+                padding:5px;
+            }
+            .navigationitem a{
+                font-size:1.2rem;
+                font-family: 'Cinzel',serif;
+                color:white;
+                text-decoration: none;
+                font-weight: bold;
+                
+                    
+
+            }
+            .maingrid{
+                grid-area:b;
+                display: grid;
+                grid-template-rows: repeat(4,auto);
+                background-color: #FFF9F0;
+                gap:25px;
+                text-align: justify;
+                justify-items: center;
+                border-radius: 10px;
+            }
+
+            .mainitem{
+                color:#4A4A4A;
+                width:70%;
+                text-align: justify;  
+                font-family: 'Lora', serif;
+                border: 2px solid #F7C8D2;
+                border-radius: 10px;
+                padding: 20px;
+                background: white;
+               
+            }
+            .mainitem a{
+                font-weight: bold;
+                color: white;
+                text-decoration: none;
+                padding: 5px 10px;
+                background-color: #F7C8D2;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+                cursor:pointer;
+                
+
+            }
+
+            .mainitem a:hover{
+                background-color: #A7C7E7;
+                transform: scale(1.2);
+            }
+
+            .imagecontainer{
+                background-image:url("images/sevenwonders.png");
+                width:68%;
+                height:450px;
+                visibility: visible;
+                opacity: 1;
+                border-radius: 10px;   
+            
+            }
+        
+           
+
+            .image{
+                display:none;
+            }
+
+            #image2:target, #image3:target,#image4:target,#image5:target,#image6:target,#image7:target,#image8:target{
+            display: block;
+            visibility:visible;
+            opacity:1;
+            width:100%;
+            height:450px;
+            border-radius: 10px;
+            border: 4px solid #F7C8D2;
+            
+            
+        }
+
+        footer{
+            grid-area: f;
+            font-family:"Cinzel";
+            box-sizing: border-box;
+            background-color:#A7C7E7;
+            color: #FFF9F0; 
+            border-radius: 10px;
+            text-align: center;
+            padding:10px;
+
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+        <header>
+           <h1> The Seven Wonders of the Ancient World </h1>
+           <img src="images/logo.png" height="100px" width="100px" style="border-radius: 10px;">
+
+        </header>
+        
+        <div class="navigation">
+            <div class="navigationitem"> <a href="index.html"> Home </a> </div>
+            <div class="navigationitem"> <a href="page3.html"> Visitor's Guide </a></div> 
+            <div class="navigationitem"> <a href="page2.html"> Learn More </a></div> 
+            <div class="navigationitem"> <a href="page4.html"> Contact </a></div>    
+        </div>
+        <div class="maingrid">
+            <br>
+            <div class="imagecontainer">
+            <img class="image" id="image2" src="images/babylon.png" width="100%" height="400px"> 
+            <img class="image" id="image3" src="images/artemis.png" width="100%" height="400px">
+            <img class="image" id="image4" src="images/alexandria.png" width="100%" height="400px">
+            <img class="image" id="image5" src="images/collosus.png" width="100%" height="400px">
+            <img class="image" id="image6" src="images/mausoleum.png" width="100%" height="400px">
+            <img class="image" id="image7" src="images/pyramids.png" width="100%" height="400px">
+            <img class="image" id="image8" src="images/zeus.png" width="100%" height="400px">
+        
+        
+        </div>
+                
+            <div class="mainitem"> The Seven Wonders of the Ancient World were a collection of remarkable constructions admired for their grandeur and ingenuity, symbolizing the achievements of ancient civilizations. These wonders included the Great Pyramid of Giza in Egypt, the only one still standing today, the Hanging Gardens of Babylon in Mesopotamia, the Statue of Zeus at Olympia in Greece, the Temple of Artemis at Ephesus in modern-day Turkey, the Mausoleum at Halicarnassus, the Colossus of Rhodes, and the Lighthouse of Alexandria. While most of these wonders no longer exist, they were celebrated for their architectural brilliance and artistic mastery, inspiring awe across cultures and continuing to capture the imagination of people throughout history. Their legacy is a testament to the creativity and ambition of ancient builders.</div>
+            <div class="mainitem"> The Hanging Gardens of Babylon, one of the Seven Wonders of the Ancient World, are said to have been a breathtaking terraced garden filled with lush greenery, cascading waterfalls, and exotic plants. Built in ancient Mesopotamia, near modern-day Iraq, they are often attributed to King Nebuchadnezzar II around 600 BCE, who allegedly created them to please his queen, who missed the verdant mountains of her homeland. Despite their legendary status, there is debate over whether they truly existed or are a blend of myth and historical misinterpretation, as no definitive archaeological evidence has been found. Their story endures as a symbol of beauty and human ingenuity.
+                <div style='text-align: right;'> <a href="#image2"> Gardens of Babylon</a> 
+                 </div>
+                </div>
+            <div class="mainitem"> The Temple of Artemis at Ephesus, located in modern-day Turkey, was a magnificent sanctuary dedicated to Artemis, the Greek goddess of the hunt, wilderness, and fertility. Renowned as one of the Seven Wonders of the Ancient World, it was constructed around 550 BCE, blending extraordinary architectural precision with artistic beauty. Built entirely of marble, the temple was adorned with intricate carvings and stood as a symbol of devotion and cultural prosperity. Tragically, it was destroyed multiple times—first by arson and later by invasions—leaving only ruins today. Its legacy, however, endures as a reminder of the grandeur and ingenuity of ancient civilizations.
+                <div style="text-align: right;"> <a href="#image3"> The Temple of Artemis </a></div> </div>
+            
+            <div class="mainitem"> The Lighthouse of Alexandria, also known as the Pharos of Alexandria, was a towering beacon built on the island of Pharos in the 3rd century BCE to guide sailors safely to the bustling port of Alexandria, Egypt. Commissioned by Ptolemy I and completed during the reign of his son Ptolemy II, it stood approximately 100 meters tall, making it one of the tallest man-made structures of the ancient world. The lighthouse featured three tiers: a square base, a cylindrical midsection, and a smaller, domed top where a fire burned to project light, amplified by polished bronze mirrors. Recognized as one of the Seven Wonders of the Ancient World, it symbolized innovation and maritime prowess. Though destroyed by earthquakes between the 10th and 14th centuries, its influence persists in modern lighthouse design, and its memory remains a testament to ancient engineering marvels.
+                <div style='text-align: right;padding:15px;'> <a href="#image4"> Lighthouse of Alexandria</a> 
+                 </div>
+                 </div>
+
+            <div class="mainitem"> The Colossus of Rhodes was a towering bronze statue of the sun god Helios, constructed in the 3rd century BCE on the Greek island of Rhodes. Standing approximately 33 meters (108 feet) tall, it was one of the Seven Wonders of the Ancient World and a symbol of unity and triumph after Rhodes successfully defended itself against a siege by Demetrius I of Macedon. Designed by the sculptor Chares of Lindos, the statue was an engineering marvel of its time, with a reinforced framework covered in bronze plates. It stood near the island’s harbor, though contrary to popular myth, it likely did not straddle the entrance. Tragically, the Colossus was toppled by an earthquake around 226 BCE and was never rebuilt, though its grandeur continued to inspire awe and legend for centuries.
+            <div style='text-align: right;'> <a href="#image5"> Collosus of Rhodes </a> 
+                </div>
+                </div>
+
+            <div class="mainitem"> The Mausoleum at Halicarnassus, located in modern-day Bodrum, Turkey, was an ornate tomb built in 350 BCE for Mausolus, a satrap of the Persian Empire, and his wife Artemisia. Renowned as one of the Seven Wonders of the Ancient World, it was designed by Greek architects Satyros and Pythius and adorned with intricate sculptures created by some of the finest artists of the time. The mausoleum stood approximately 45 meters (148 feet) tall, blending Greek, Egyptian, and Lycian architectural styles, with a rectangular base, an elaborate colonnade, and a stepped pyramid crowned by a chariot statue. Despite being destroyed by earthquakes in the medieval period, its name lives on as the origin of the term "mausoleum," symbolizing its lasting impact as a masterpiece of ancient art and architecture.
+                <div style='text-align: right;'> <a href="#image6"> Mausoleum at Halicarnassus</a> 
+                </div>
+                </div>
+
+            <div class="mainitem"> The Pyramids of Giza, located on the Giza Plateau near Cairo, Egypt, are the only surviving wonder of the Seven Wonders of the Ancient World. Built during the Fourth Dynasty of the Old Kingdom, around 2600–2500 BCE, they served as monumental tombs for pharaohs, with the Great Pyramid constructed for Pharaoh Khufu being the largest and most famous. The precision and scale of these pyramids, made from millions of limestone and granite blocks, showcase the advanced engineering skills of ancient Egyptians. The complex also includes the pyramids of Khafre and Menkaure, as well as the Great Sphinx. Over millennia, the pyramids have remained symbols of Egypt’s cultural and architectural legacy, inspiring awe for their scale, craftsmanship, and historical significance.
+                <div style='text-align: right;'> <a href="#image7"> Pyramids of Giza</a> 
+                    </div>
+                    </div>
+
+            <div class="mainitem"> The Statue of Zeus at Olympia was a colossal figure of the Greek god Zeus, created by the famed sculptor Phidias around 435 BCE. Standing over 12 meters (39 feet) tall, it was housed in the Temple of Zeus at Olympia, Greece, where it was one of the most awe-inspiring sculptures of the ancient world. Made of ivory and gold-plated bronze, the statue depicted Zeus seated on a magnificent throne, holding a figure of Nike, the goddess of victory, in one hand, and a scepter in the other. The statue was celebrated for its monumental scale and exquisite craftsmanship, symbolizing both divine power and the artistic achievements of ancient Greece. Unfortunately, the statue was eventually lost, likely destroyed in a fire, but its legacy endures through descriptions and depictions in ancient texts, solidifying its place as one of the Seven Wonders of the Ancient World.
+                <div style='text-align: right;padding:15px;'> <a href="#image8"> Statue of Zeus at Olympia</a> 
+                    </div>
+                    </div>
+
+                    <br> 
+            </div>
+
+            <footer>
+                Sara's Archives &trade;
+
+            </footer>
+        
+        
+    
+
+    </div>
+    </body>
+    </html>

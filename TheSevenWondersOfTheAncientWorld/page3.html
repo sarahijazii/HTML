@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Visitor's Guide </title>
+        <style>
+
+
+            .container{
+                display: grid;
+                grid-template-areas: 
+                "h h h"
+                "n b b"
+                "f f f";
+                grid-template-columns: 1fr 5fr;
+                gap: 10px;
+             
+        
+            }
+            header{
+                grid-area: h;
+                padding:20px;
+                
+                font-family:"Cinzel";
+                box-sizing: border-box;
+                background-color:#A7C7E7;
+                color: #FFF9F0; 
+                border-radius: 10px;
+                display: grid;
+                grid-template-columns: auto auto;
+                gap:45%;
+               
+                
+           
+                
+            }
+
+            .navigation{
+                grid-area: n;
+                padding:25px;
+                box-sizing: border-box;
+                background-color: #F7C8D2;
+                text-align: center;
+                border-radius: 10px;
+                
+                
+                
+              
+            }
+
+            .navigationitem{
+                padding:5px;
+            }
+            .navigationitem a{
+                font-size:1.2rem;
+                font-family: 'Cinzel',serif;
+                color:white;
+                text-decoration: none;
+                font-weight: bold;
+                
+                    
+
+            }
+            .maingrid{
+                grid-area:b;
+                background-color: #FFF9F0;
+                text-align: justify;
+                border-radius: 10px;
+                padding:20px;
+                float:left;
+                box-sizing: border-box;
+                
+               
+            }
+ 
+
+            dd{
+                color:#4A4A4A;
+                text-align: justify;  
+                font-family: 'Lora', serif;
+                border: 2px solid #F7C8D2;
+                border-radius: 10px;
+                padding: 20px;
+                background: white;
+                margin:15px;
+                padding-left: 30px;
+            
+                
+               
+                
+               
+            }
+
+            dt{
+                color:#4A4A4A;
+                text-align: justify;  
+                font-family: 'Lora', serif;
+                font-size:1.2rem;
+                
+
+            }
+            
+         
+
+        footer{
+            grid-area: f;
+            font-family:"Cinzel";
+            box-sizing: border-box;
+            background-color:#A7C7E7;
+            color: #FFF9F0; 
+            border-radius: 10px;
+            text-align: center;
+            padding:10px;
+
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+        <header>
+           <h1> The Seven Wonders of the Ancient World </h1>
+           <img src="images/logo.png" height="100px" width="100px" style="float:left; margin-right: 20px; margin-bottom: 20px;">
+
+        </header>
+        
+        <div class="navigation">
+            <div class="navigationitem"> <a href="index.html"> Home </a> </div>
+            <div class="navigationitem"> <a href="page3.html"> Visitor's Guide </a></div> 
+            <div class="navigationitem"> <a href="page2.html"> Learn More </a></div> 
+            <div class="navigationitem"> <a href="page4.html"> Contact </a></div>    
+        </div>
+        <div class="maingrid">
+
+           <i> <h2 style="color:#928b78; padding:10px;"> Visitor's Guide </h2> </i>
+
+            <img src="images/map.png" width="600px" height="500px" style="float:left;border: 4px solid #F7C8D2;">
+            
+
+             <dl> 
+             
+<dt> The Great Pyramid of Giza (Egypt) </dt>
+<dd> Visit the only surviving wonder! Explore the vast pyramids, and try to visit the Great Pyramid of Khufu, located near Cairo. Don't miss the Sphinx nearby! </dd> 
+<br>
+ 
+<dt>The Hanging Gardens of Babylon (Iraq) </dt>
+<dd>Although the gardens' existence is debated, you can visit the ancient ruins of Babylon near Hillah, Iraq. A guided tour can help uncover its mysteries.</dd>
+<br>
+
+ 
+<dt>The Statue of Zeus (Greece)</dt>
+<dd>In Olympia, Greece, you can explore the archaeological site of the temple dedicated to Zeus, even though the statue itself is lost.</dd>
+<br><br><br><br>
+
+ 
+<dt>The Temple of Artemis (Turkey)</dt>
+<dd>Visit the site in Ephesus, Turkey, where parts of the temple and a reconstructed column remain, showcasing its former grandeur.</dd>
+<br>
+
+ 
+<dt>The Mausoleum at Halicarnassus (Turkey)</dt>
+<dd>In Bodrum, Turkey, visit the ruins of this massive tomb. The remnants were used in the construction of Bodrum Castle.</dd>
+<br>
+
+ 
+<dt>The Colossus of Rhodes (Greece)</dt>
+<dd>Although the statue no longer stands, you can visit the harbor of Rhodes and see the remnants of the foundation, along with museums displaying its history.</dd>
+<br>
+
+ 
+<dt>The Lighthouse of Alexandria (Egypt)</dt>
+<dd>Located on the Mediterranean coast of Egypt, most of the lighthouse is submerged, but you can visit the underwater ruins or tour the nearby Citadel of Qaitbay.</dd>
+      <br>
+        </dl>
+        </div>
+
+            <footer>
+                Sara's Archives &trade;
+
+            </footer>
+        
+        
+    
+
+    </div>
+    </body>
+    </html>

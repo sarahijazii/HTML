@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Learn More </title>
+        <style>
+
+
+            .container{
+                display: grid;
+                grid-template-areas: 
+                "h h h"
+                "n b b"
+                "f f f";
+                grid-template-columns: 1fr 5fr;
+                gap: 10px;
+                height:100vh;
+             
+        
+            }
+            header{
+                grid-area: h;
+                padding:20px;
+                
+                font-family:"Cinzel";
+                box-sizing: border-box;
+                background-color:#A7C7E7;
+                color: #FFF9F0; 
+                border-radius: 10px;
+                display: grid;
+                grid-template-columns: auto auto;
+                gap:45%;
+               
+                
+           
+                
+            }
+
+            .navigation{
+                grid-area: n;
+                padding:25px;
+                box-sizing: border-box;
+                background-color: #F7C8D2;
+                text-align: center;
+                border-radius: 10px;
+                
+                
+                
+              
+            }
+
+            .navigationitem{
+                padding:5px;
+            }
+            .navigationitem a{
+                font-size:1.2rem;
+                font-family: 'Cinzel',serif;
+                color:white;
+                text-decoration: none;
+                font-weight: bold;
+                
+                    
+
+            }
+            .maingrid{
+                grid-area:b;
+                display: grid;
+                grid-template-columns: repeat(2,auto);
+                background-color: #FFF9F0;
+                gap:25px;
+                text-align: justify;
+                justify-items: left;
+                border-radius: 10px;
+                padding:20px;
+            }
+
+            .mainitem{
+                color:#4A4A4A;
+                width:auto;
+                text-align: justify;  
+                font-family: 'Lora', serif;
+                border: 2px solid #F7C8D2;
+                border-radius: 10px;
+                padding: 20px;
+                background: white;
+               
+               
+            }   
+            
+    
+
+        footer{
+            grid-area: f;
+            font-family:"Cinzel";
+            box-sizing: border-box;
+            background-color:#A7C7E7;
+            color: #FFF9F0; 
+            border-radius: 10px;
+            text-align: center;
+            padding:10px;
+
+        }
+        li{
+            padding:10px;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+        <header>
+           <h1> The Seven Wonders of the Ancient World </h1>
+           <img src="images/logo.png" height="100px" width="100px" style="border-radius: 10px;">
+
+        </header>
+        
+        <div class="navigation">
+            <div class="navigationitem"> <a href="index.html"> Home </a> </div>
+            <div class="navigationitem"> <a href="page3.html"> Visitor's Guide </a></div> 
+            <div class="navigationitem"> <a href="page2.html"> Learn More </a></div> 
+            <div class="navigationitem"> <a href="page4.html"> Contact </a></div>    
+        </div>
+        <div class="maingrid">
+
+            <div> <h2 style="color:#928b78"> Learn About the Seven Wonders of the Ancient World</h2> 
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/86FyWTKzxpI?si=ksmfKE7s_CmJ8dGN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius:10px"></iframe> </div>
+
+            <div class="mainitem">
+                <h3 style="color:#928b78;padding-left:25px;"> Fun Facts: </h3>
+                <ul>
+                    <li><strong>Fact 1:</strong> The Great Pyramid of Giza is the oldest of the Seven Wonders and the only one still standing today.</li>
+                    <li><strong>Fact 2:</strong> The Lighthouse of Alexandria was one of the tallest man-made structures in the world for many centuries.</li>
+                    <li><strong>Fact 3:</strong> The Hanging Gardens of Babylon may not have even existed, with no definitive archaeological evidence of their location.</li>
+                    <li><strong>Fact 4:</strong> The Statue of Zeus in Olympia was so large that it nearly filled the entire temple where it stood.</li>
+                    <li><strong>Fact 5:</strong> The Mausoleum at Halicarnassus was built by Artemisia II in memory of her husband, and it was so grand that its name became synonymous with any grand tomb.</li>
+                </ul>
+            </div>
+
+        </div>
+
+            <footer>
+                Sara's Archives &trade;
+
+            </footer>
+        
+        
+    
+
+    </div>
+    </body>
+    </html>
