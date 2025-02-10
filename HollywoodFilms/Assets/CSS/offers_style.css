@@ -1,0 +1,162 @@
+/** Styling for the Offers page */
+
+/* General reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #fff;
+    background-color: black;
+}
+
+/* Navigation bar styling */
+nav {
+    text-align: center;
+    padding: 2%;
+    position:sticky;
+    top: 1%;
+    opacity:0.6; /* Slight transparency */
+    z-index:2;
+    font-size: 1.3rem;
+    color:white;
+}
+
+/* Links inside the hidden nav bar */
+nav .hide a {
+    text-decoration: none;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:bold;
+    padding-left: 7%;
+    opacity:1;
+}
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1%;
+}
+
+/* Styling for content boxes */
+.content-box {
+    background-color: white;
+    width: 70%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    display: flex;
+    padding: 1%;
+}
+
+/* Images inside content boxes */
+.content-box img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(); /* Grayscale effect */
+}
+
+/* Hover effect for content boxes */
+.content-box:hover {
+    transform: scale(1.05);
+}
+
+
+/* Styling for Footer */
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 1.5%;
+    bottom: 0;
+    width: 100%;
+    border-top:0.1px rgb(71, 71, 71) solid;
+    color:rgb(85, 85, 85);
+    font-size: 0.9rem;
+}
+
+/* Hamburger menu (hidden by default) */
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+}
+
+.hamburger .line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+.visible{
+    z-index: 2;
+    position: relative;
+}
+
+
+/* Mobile navigation menu */
+.nav-mobile{
+    background-color: black;
+    visibility: hidden;
+    z-index: 1;
+    position: absolute;
+    width: 100vw;
+    height: 1000px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+.nav-mobile a{
+    color:white;
+    text-decoration: none;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom:10%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Tablet navigation menu */
+.nav-tablet{
+    background-color: black;
+    visibility: hidden;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+}
+
+/* Media for tablets */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger menu */
+    }
+
+    nav .hide {
+        display: none; /* Hide larger nav bar */
+    }
+
+    #menu:target { 
+        visibility: visible; /* Show menu when targeted */
+        z-index: 3;
+
+    }
+}
+
+/* Media for phones */
+@media (max-width: 480px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav .hide {
+        display: none;
+    }
+
+}

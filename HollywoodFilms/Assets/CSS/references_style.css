@@ -1,0 +1,99 @@
+/** Styling for the References page */
+
+body {
+    font-family: 'Cambria', serif;
+    margin: 0;
+    color: black;
+    background-color: white;
+  }
+
+  /* Container: layout spans the full viewport height minus header and footer */
+  .container {
+    display: flex;
+    min-height: calc(100vh - 140px); /* Adjust for header and footer height */
+  }
+  
+  /* Navigation bar styles with vertical layout */
+  nav {
+    background-color: black;
+    color: white;
+    width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  /* Remove default padding and bullet points */
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+  }
+  
+  /* Navigation links styling and remove underlines */
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  /* Main content Full width of remaining space with centered text */
+  main {
+    flex: 1;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Footer styles with fixed positioning at the bottom */
+  footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+  }
+  
+  .summary-details {
+    margin-top: 40px;
+    padding: 20px;
+    color: white;
+  }
+  
+  details {
+    margin-bottom: 20px;
+  }
+  
+  /* Summary: Style the clickable title for details */
+  summary {
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 0;
+    color: white;
+  }
+  
+  /* Styling Links inside details*/
+  details a {
+    padding: 10px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+/* Hover effect for links in details: Add underline for emphasis */
+  details a:hover {
+    text-decoration: underline;
+  }
+  

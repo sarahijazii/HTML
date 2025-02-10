@@ -1,0 +1,257 @@
+/** Styling for the Book page */
+
+
+body{
+    background-color: rgb(13, 12, 12);
+}
+
+/** Nav is a grid that has four columns for each nav link*/
+nav{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding:30px;
+    justify-content: center;
+    text-align: center;
+}
+
+/** Styling for each nav link */
+nav a{
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-right:130px;
+    padding-left: 130px;
+    font-weight:bold;
+    opacity:0.7;
+}
+
+/** Grid container for movie poster and movie buttons */
+.selectmovie{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    
+}
+
+/** Table container for movie buttons */
+.cinema{
+    display:table;
+    border-collapse: separate;
+    border-spacing:15px;
+    width:70%;
+    height:500px;
+    padding-top:50px;
+    padding-right:90px;
+}
+
+/** Table row */
+.cinemarow{
+    display:table-row;
+}
+
+/** Styling for each movie button */
+.movie {
+display: table-cell; /* Treat this div as a table cell */
+line-height:2.5;
+padding: 10px; /* Space inside each cell */
+border-radius: 3px;
+
+}
+
+/** Styling for BOOK NOW header*/
+.booknow {
+color: white;
+text-align: center;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+padding-top: 120px;
+padding-bottom:50px;
+}
+
+/** Styling for each selection header (EX: Select location, Select seat, etc. */
+.select{
+color: white;
+text-align: center;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+padding-top: 120px;
+padding-bottom:50px;
+font-size: 1.3rem;
+}
+
+/** Settings for the images to be hidden until the movie button is clicked. Transition is for smoother selection */
+.image {
+display:block;
+width: 100%;
+max-width: 100%;
+height:0px;
+opacity: 0;
+visibility: hidden;
+transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+/** When image ID is targeted, the movie poster becomes visible */
+#image1:target, #image2:target,#image3:target,#image4:target,#image5:target, #image6:target,#image7:target,#image8:target,#image9:target, #image10:target,#image11:target,#image12:target 
+{opacity: 1;
+visibility: visible;
+height:600px;
+}
+
+/** Styling for the movie button link */
+.movielink{
+color:rgb(13, 12, 12);
+text-decoration: none;
+}
+
+
+/** Hover effect over movie buttons */
+.movie:hover {
+background-color: rgb(218, 214, 214);
+opacity: 0.5;
+}
+
+/** Styling for summary */
+summary{
+color:white;
+font-size: 1.3rem;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/** Styling for the entire details container */
+details{
+padding:50px;
+border-bottom: 0.1px rgb(71, 71, 71) solid;
+
+}
+/** Grid container for all the date showings, with five available dates to choose from */
+.week{
+display:grid;
+grid-template-columns: repeat(5,auto) ;
+column-gap: 10px;
+justify-items: center;
+}
+
+/** Individual styling for each date. Also functions as grid container with three rows, one for day, one for date, one for month */
+.date{
+background-color: white;
+display:grid;
+grid-template-rows: auto auto auto;
+width:80%;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/** Grid container for all the timings of the movie, default is 10 timings */ 
+.clock{
+display: grid;
+grid-template-columns: repeat(10,auto);
+justify-items: center;
+column-gap: 10px;
+}
+
+/** Styling for individual timing */
+.time{
+font-size:1.1rem;
+width:100%;  
+padding:5px;    
+box-sizing: border-box;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
+
+}
+/** Common styling between these three classes */
+.date,.movie,.time{
+background-color: white;  
+text-align: center; 
+color:black;
+
+
+}
+
+/** When .date is targeted, the opacity of the button changes to show its being clicked */
+.date:target{
+opacity:0.5;
+
+
+}
+/** When .time is targeted, the opacity of the button changes to show its being clicked */
+.time:target{
+opacity:0.5;
+}
+
+/** Remove underline under all links */
+a{
+text-decoration: none;
+}
+
+/** Grid container with 5 columns and 4 rows showing a cinema room of seats to select */
+.cinemaroom{
+display: grid;
+grid-template-columns: repeat(5,auto);
+grid-template-rows: repeat(4,auto);
+justify-items: center;
+width:50%;
+gap:0px;
+}
+
+
+.cinemaroom img{
+filter: none; /* Default: no filter */
+transition: filter 0.3s ease;
+
+}
+
+/** Once the image is targeted, it will have a grayscale filter on it to show selection */
+.cinemaroom img:target{
+filter: grayscale(100%); 
+}
+
+/** Styling for ticket booking button */
+.bookticket{
+display: inline-block;
+background-color: white;
+padding:10px;
+padding-right:15px ;
+padding-left: 15px;
+margin-top: 80px;
+margin-bottom: 80px;
+
+
+}
+
+/** Styling for the link for ticket booking */
+.bookticket a{
+color:rgb(13, 12, 12);
+font-size: 1.3rem;
+
+}
+
+/** Container of the main content, with z-index 2 so its above the container of the ticket*/
+.container{
+position: relative;
+z-index: 2;
+}
+
+
+/** When ticket ID is targeted, its z-index will change and be above the container of the main content*/
+#ticket:target {
+z-index: 3;
+display:block;
+visibility: visible;
+
+
+}
+
+/** Container will have display none when ticket ID is targeted */
+#ticket:target + .bookticket .container {
+display:none;
+
+}
+
+/** Footer styling */
+footer{
+    border-top:0.1px rgb(71, 71, 71) solid;
+    padding-top: 30px;
+    color:rgb(85, 85, 85);
+    text-align: center;
+    padding:10px;
+    background-color: rgb(13, 12, 12);
+    opacity:0.5;
+}

@@ -1,0 +1,214 @@
+
+/** Styling for the Index page */
+
+
+/* General layout container styling */
+.visible{
+    display:grid;
+    grid-template-areas:
+    "n n n" /* Navigation occupies the first row */
+    "h h h" /* Header occupies the second row */
+    "m m m" /* Main content occupies the third row */
+    "f f f"; /* Footer occupies the last row */
+    grid-template-rows: 1.5% auto auto 1fr ; /* Specifies row heights */
+    gap:0;
+    background-color: rgb(13, 12, 12);  
+}
+
+/* Body background styling */
+body{
+    background-color: rgb(13, 12, 12);
+}
+
+/* Navigation bar styling */
+nav{
+    display:grid;
+    grid-area: n; /* Places it in the grid area labeled "n" */
+    grid-template-columns: auto auto;
+    position:sticky; /* Keeps nav visible at the top while scrolling */
+    top:6px;
+    padding:10px;
+    opacity:0.6; /* Semi-transparent background */
+    z-index:2; /* Ensures the nav stays above other elements */
+    font-size: 1.3rem;
+    color:white; 
+}
+
+/* Nav elements on the right of the nav bar */
+nav div{
+    display:grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: right;
+}
+
+/* Styling for links within the navigation */
+nav a{
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-right:22px;
+    opacity:1;
+    text-decoration: none;
+}
+
+main{
+    margin-top:60px;
+    grid-area:m;  /* Places it in the grid area labeled "m" */
+}
+
+/* Grid for displaying movies */
+.movies{
+    display:grid;
+    grid-template-columns: auto auto auto; /* Three columns for movie items */
+    grid-template-rows: repeat(4,auto); /* Four rows with auto height */
+    justify-items: center;
+    margin-top:100px;
+    row-gap:50px;
+    margin-bottom: 60px; 
+}
+
+/* Movie title styling */
+.moviename{ 
+    margin-top: 13%;
+    font-size: 1.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: white;
+    visibility: visible;
+}
+
+/* Text styling for movie descriptions */
+.moviewordstyle {
+    color: white;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: none;
+    font-size: 2rem;
+}
+
+/* Hidden synopsis box styling */
+.synopsis{
+    visibility:hidden;
+    opacity: 0;
+    position: absolute;
+    z-index:2; /* Above other elements */
+    top:0;
+    left:50px;
+    text-align: center;
+    width:300px;
+    height:600px;
+    font-size:1.3rem;
+    display: grid;
+    place-items: center;
+    line-height: 1.75;
+    font-family: Baskerville;
+}
+
+/* Book Now Button */
+.synopsis a{
+    background-color: rgb(255, 255, 255);
+    color:black;
+    padding:5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif Georgia, Times, 'Times New Roman', serif;
+}
+
+.imgsize{
+    height:600px;
+    width:400px;
+}
+
+/* Image container styling */
+.image{
+    position:relative;
+    z-index: 1; /* Below synopsis */
+}
+
+/* Hover effect for images */
+.image:hover img{
+    opacity: 0.1; /* Fades image */
+    transform: scale(1.1, 1.1); /* Slight zoom effect */
+    transition: 0.4s; /* Smooth transition */
+}
+
+/* Reveal synopsis on hover */
+.image:hover .synopsis {
+    opacity: 1;
+    visibility: visible; /* Makes it visible */
+    color: rgb(255, 255, 255); 
+}
+
+/* Footer styling */
+footer{
+    grid-area:f; /* Places it in the grid area labeled "f" */
+    border-top:0.1px rgb(71, 71, 71) solid;
+    color:rgb(221, 215, 215);
+    text-align: center;
+    padding:10px;
+    background-color: rgb(13, 12, 12);
+    opacity:0.5;
+}
+
+/* Links inside the hidden nav bar which will be hidden in tablet and mobile*/
+nav .hide a {
+    text-decoration: none;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight:bold;
+    padding-left: 7%;
+    opacity:1;
+}
+
+/* Hamburger menu (hidden by default) */
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+}
+
+.hamburger .line {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+.visible{
+    z-index: 2;
+    position: relative;
+}
+
+/* Mobile navigation menu */
+.nav-mobile{
+    background-color: black;
+    visibility: hidden;
+    z-index: 1;
+    position: absolute;
+    width: 100vw;
+    height: 1000px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;   
+}
+
+.nav-mobile a{
+    color:white;
+    text-decoration: none;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom:10%;
+}
+
+/* Tablet navigation menu */
+.nav-tablet{
+    background-color: black;
+    visibility: hidden;
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+}
