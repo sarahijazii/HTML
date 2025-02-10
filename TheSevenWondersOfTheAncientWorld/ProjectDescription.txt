@@ -1,0 +1,4 @@
+My first endeavor into CSS and HTML involved creating this website on The Seven Wonders of The Ancient World, where we were tasked to create 
+buttons that changed the center image into different pictures, depending on which ancient wonder you want to view. I added additional 
+functionalities to the website such as a "Visitor's guide" that includes a map and relevant details on the wonders, a "Learn more" page that 
+hosts a web video, and a "Contact" page that allows visitors to get in touch. 
