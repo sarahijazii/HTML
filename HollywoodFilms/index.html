@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Ensures the webpage is responsive and adapts to device width -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Assets/CSS/index_style.css">
+        <title> Hollywood Films </title>
+        <style>
+
+            /* Styling for the header section */
+            header{
+                grid-area:h;
+                background-image: url("Assets/media/logo5.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                width:100%;
+                height:600px;
+                position:relative;
+                top:-50px;
+                z-index:1;   
+                }
+
+            /* Media for devices with a max width of 768px (Tablets)*/
+            @media (max-width: 768px){
+
+                /* Show hamburger menu for navigation */
+                .hamburger {
+                    display: flex; /* Show hamburger menu */
+                }
+
+                /* Adjust header styling for smaller screens */
+                header {
+                    height:50vh;
+                    background-size: cover;
+                    justify-content: center; 
+                    width:100%;
+                    top:10px;   
+                }
+
+                nav{
+                    grid-template-columns: auto;
+                    font-size: 1rem;
+                    text-align: center;
+                }
+
+                /* Hide desktop nav bar on smaller screens */
+                .hide{
+                    display: none;
+                }
+               
+                /* Adjust font size and layout of movie-related content */
+                .moviewordstyle{
+                    font-size: 1rem;
+                }
+
+                .movies{
+                    grid-template-columns: auto auto;
+                }
+
+                .moviename{
+                font-size: 0.7rem; 
+                }
+
+                .synopsis{
+                    width:50%;
+                    height:300px;
+                    font-size:0.5rem;
+                    line-height: 1.75;
+                }
+
+                .synopsis a{
+                    padding:5%;
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    font-size: 0.5rem;
+                    
+                }
+
+                .imgsize{
+                    width:100%;
+                    height:300px;
+                }
+
+                footer{
+                    font-size:0.6rem ;
+                }
+
+                #menu:target { 
+                    visibility: visible; /* Show menu when targeted */
+                    z-index: 3;
+                }
+            }
+
+            /* Media for devices with a max width of 480px (Phones)*/
+            @media (max-width: 480px) {
+
+                /* Show hamburger menu for very small screens */
+                hamburger {
+                     display: flex;
+                }
+
+                /* Adjust header styling */
+                header {
+                    height:50vh;
+                    background-size: cover;
+                    justify-content: center;  
+                    width:100%;  
+                    top:-50px;
+                }
+
+                nav{
+                grid-template-columns: auto;
+                font-size: 1rem;
+                text-align: center;
+                }
+
+                /* Hide desktop navigation bar */
+                .hide{
+                    display: none;
+                }
+
+                /*reduce text sizes */
+                .moviewordstyle{
+                    font-size: 1rem;
+                }
+
+                .movies{
+                    grid-template-columns: auto;
+                }
+
+                .moviename{
+                font-size: 0.7rem; 
+                }
+
+                .synopsis{
+                    width:50%;
+                    height:300px;
+                    font-size:0.5rem;
+                    line-height: 1.75;
+                }
+
+                .synopsis a{
+                    padding:5%;
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    font-size: 0.5rem;
+                    
+                }
+
+                .imgsize{
+                    width:100%;
+                    height:300px;
+                }
+
+                footer{
+                    font-size:0.6rem ;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+         <!-- Hidden Mobile navigation menu -->
+    <div id="menu" class="nav-mobile">
+        <a href="index.html">H O M E</a>
+        <a href="book.html">B O O K</a>
+        <a href="menu.html">M E N U</a>
+        <a href="offers.html">P R O M O T I O N S</a>
+        <a href="references.html">R E F E R E N C E S</a>
+    </div>
+
+    <!-- Hidden Tablet navigation menu -->
+    <div id="menu" class="nav-tablet">
+        <a href="index.html">H O M E</a>
+        <a href="book.html">B O O K</a>
+        <a href="menu.html">M E N U</a>
+        <a href="offers.html">P R O M O T I O N S</a>
+        <a href="references.html">R E F E R E N C E S</a>
+    </div>
+
+        <!-- Main content -->
+        <div class="visible">
+        <nav> 
+            <!-- Website title in nav bar -->
+            <span style="padding-left:10px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;font-size:1.4rem"> HOLLYWOOD FILMS </span>
+
+            <!-- Desktop navigation links -->
+            <div class="hide">
+                <a href="book.html"> BOOK</a> 
+                <a href="offers.html"> PROMOTIONS</a>
+                <a href="menu.html"> MENU</a>
+                <a href="references.html"> REFERENCES </a>
+            </div>
+
+            <!-- Hamburger menu for smaller screens -->
+            <a href="#menu">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                </a>
+
+        </nav>
+        
+        <!-- Header section with background image -->
+        <header></header>
+
+            <main>
+
+                <!-- Section heading -->
+                <div class="moviewordstyle"> M O V I E S </div>
+                
+                <!-- Grid of movies -->
+                <div class="movies">
+
+                    <!-- Hover on movie for synopsis to show. Click on BOOK NOW to be transported to booking page-->
+                    <div class="image"> <img src="Assets/media/casablanca.png" class="imgsize">
+                    <div class="synopsis"> Casablanca (1942) is a romantic drama set during World War II, where nightclub owner Rick Blaine is reunited with his former lover Ilsa Lund in German-occupied Casablanca. Ilsa and her husband, Resistance leader Victor Laszlo, seek Rick's help to escape the Nazis. Torn between love and duty, Rick must decide whether to help them or pursue his own desires. The film is a classic tale of sacrifice, patriotism, and lost love.
+                    <a href="book.html"> BOOK NOW </a>
+                    </div><div class="moviename"> Casablanca</div> </div>
+
+
+                    <div class="image"> <img src="Assets/media/breakfast.png" class="imgsize"> 
+                    <div class="synopsis"> Breakfast at Tiffany's (1961) is a romantic comedy-drama about Holly Golightly (Audrey Hepburn), a charming but enigmatic socialite in New York City, and her budding relationship with her neighbor, Paul Varjak (George Peppard), a struggling writer. As their lives intertwine, Holly's free-spirited facade masks her vulnerability and search for belonging.
+                    <a href="book.html"> BOOK NOW </a> 
+                    </div><div class="moviename"> Breakfast at Tiffany's</div></div>
+
+                
+                    <div class="image"> <img src="Assets/media/getout.png" class="imgsize"> 
+                    <div class="synopsis"> Get Out (2017) is a psychological horror-thriller about Chris, a Black man who visits his white girlfriend Rose's family estate, only to uncover a sinister secret beneath their warm facade. As the family's disturbing behavior escalates, Chris discovers he's trapped in a terrifying conspiracy. The film explores race, trust, and survival with sharp social commentary.
+                    <a href="book.html"> BOOK NOW </a> 
+                    </div><div class="moviename"> Get out</div></div>
+                
+                
+                    <div class="image"> <img src="Assets/media/theawfultruth.png" class="imgsize"> 
+                    <div class="synopsis"> The Awful Truth (1937) is a screwball comedy about Jerry and Lucy Warriner, a couple whose mutual distrust leads to divorce. As they try to move on, their antics and jealousy reveal their lingering love for each other. Hilarious misunderstandings and witty banter drive this classic tale of reconciliation.
+                    <a href="book.html"> BOOK NOW </a>
+                    </div><div class="moviename"> The Awful Truth</div></div>
+                    
+                
+                    <div class="image"> <img src="Assets/media/rocky.png" class="imgsize"> 
+                    <div class="synopsis"> Rocky (1976) is an underdog story about Rocky Balboa, a small-time boxer from Philadelphia who gets a once-in-a-lifetime shot at the heavyweight title. Facing champion Apollo Creed, Rocky trains tirelessly to prove his worth. Along the way, he finds love with shy pet shop worker Adrian. The film is a heartfelt tale of determination, resilience, and personal triumph. 
+                    <a href="book.html"> BOOK NOW </a>
+                    </div><div class="moviename"> Rocky</div></div>
+                
+                
+                    <div class="image"> <img src="Assets/media/blackswan.png" class="imgsize"> 
+                    <div class="synopsis"> Black Swan (2010) follows Nina Sayers, a perfectionist ballerina competing for the lead role in Swan Lake. As she battles with her inner demons and the pressure of the role, Nina becomes consumed by jealousy and paranoia. Her psyche fractures as she strives to embody both the innocent White Swan and the dark Black Swan. The film explores themes of identity, obsession, and the cost of artistic ambition.
+                    <a href="book.html"> BOOK NOW </a> </div>
+                    <div class="moviename"> Black Swan</div></div>
+
+
+                    <div class="image"> <img src="Assets/media/killbill.png" class="imgsize"> 
+                    <div class="synopsis"> Kill Bill: Volume 1 (2003) follows The Bride, a former assassin seeking revenge on the members of the Deadly Viper Assassination Squad who betrayed her. After surviving an attempt on her life, she hunts them down one by one. The film is packed with stylized martial arts battles, including iconic sword fights. Directed by Quentin Tarantino, it combines influences of samurai, grindhouse, and western cinema. 
+                    <a href="book.html"> BOOK NOW </a>
+                    </div><div class="moviename">Kill Bill: Volume 1</div></div>
+                
+                
+                    <div class="image"> <img src="Assets/media/starwars.png" class="imgsize"> 
+                    <div class="synopsis"> Star Wars: Episode I - The Phantom Menace (1999) follows Jedi Qui-Gon Jinn and Obi-Wan Kenobi as they protect Queen Amidala from a Trade Federation invasion. They discover Anakin Skywalker, a boy strong in the Force, and uncover a Sith plot. The film introduces key characters and sets the stage for the rise of the Empire. It blends adventure, politics, and the beginning of Anakin’s journey.
+                    <a href="book.html"> BOOK NOW </a>
+                    </div><div class="moviename">Star Wars: Episode I - The Phantom Menace</div></div>
+                
+                
+                    <div class="image"> <img src="Assets/media/invisibleman.png" class="imgsize"> 
+                    <div class="synopsis"> The Invisible Man (1933) follows scientist Griffin, who discovers a way to make himself invisible but becomes increasingly unhinged. As he struggles with his newfound power, Griffin turns violent and terrorizes those around him. His descent into madness leads to chaos, as he tries to avoid capture. The film is a blend of horror and suspense, exploring the consequences of unchecked scientific ambition.
+                    <a href="book.html"> BOOK NOW </a>
+                    </div><div class="moviename">The Invisible Man</div></div>
+
+                
+                
+                    <div class="image"> <img src="Assets/media/dracula.png" class="imgsize"> 
+                    <div class="synopsis"> Dracula (1931) tells the story of Count Dracula, a vampire who travels from Transylvania to England to spread his curse. He becomes infatuated with Mina, the fiancée of her friend Jonathan Harker, and begins to prey on her. As Dracula’s influence grows, Harker and his allies try to stop him and save Mina. The film is a classic Gothic horror, exploring themes of desire, fear, and immortality.
+                    <a href="book.html"> BOOK NOW </a>
+                    </div><div class="moviename">Dracula</div></div>
+                
+                
+                    <div class="image"> <img src="Assets/media/wonderfullife.png" class="imgsize"> 
+                    <div class="synopsis"> It's a Wonderful Life (1946) follows George Bailey, a man on the brink of suicide, who is shown by an angel how much his life has impacted others. Through flashbacks, he sees the positive effects of his sacrifices on his family, friends, and community. The film explores themes of love, self-worth, and the importance of human connection. It is a heartwarming tale of redemption and the value of a single life.
+                    <a href="book.html"> BOOK NOW </a>
+                    </div><div class="moviename">It's a Wonderful Life</div></div>
+                
+                
+                    <div class="image"> <img src="Assets/media/pulpfiction.png" class="imgsize"> 
+                    <div class="synopsis">Pulp Fiction (1994) intertwines several stories, including hitmen Vincent and Jules, a boxer, and a gangster’s wife. The film explores fate, redemption, and violence through its nonlinear narrative. Directed by Quentin Tarantino, it’s known for its witty dialogue and bold storytelling. Pulp Fiction became iconic for its unique structure and memorable characters. 
+                    <a href="book.html"> BOOK NOW </a>
+                    </div><div class="moviename">Pulp Fiction</div></div>
+
+                </div>
+            </main>
+
+        <!-- Footer section -->
+        <footer>
+            2024 © Hollywood Films
+            <br> 
+            Lana Kendakji & Sara Hijazi Productions
+        </footer>
+        
+    </div>
+    </body>
+</html>

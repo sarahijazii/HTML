@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Ensures the webpage is responsive and adapts to device width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotions Page</title>
+    <link rel="stylesheet" href="Assets/CSS/offers_style.css">
+    <style>
+        /* Header background image */
+        header {
+            background-image: url('Assets/media/promotion.png');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+    }
+
+    /* Media for phones */
+@media (max-width: 480px) {
+    /* adjust header for mobile phone size */
+    header{
+        background-size: contain;
+        background-repeat: no-repeat;
+        width:100%;
+    }}
+
+    /* Media for tablets */
+@media (max-width: 768px) {
+    header{
+        background-size: contain;
+        background-repeat: no-repeat;
+        width:100%;
+    }}
+
+    </style>
+</head>
+<body>
+    <!-- Hidden Mobile navigation menu -->
+    <div id="menu" class="nav-mobile">
+        <a href="index.html">H O M E</a>
+        <a href="book.html">B O O K</a>
+        <a href="menu.html">M E N U</a>
+        <a href="offers.html">P R O M O T I O N S</a>
+        <a href="references.html">R E F E R E N C E S</a>
+    </div>
+
+    <!-- Hidden Tablet navigation menu -->
+    <div id="menu" class="nav-tablet">
+        <a href="index.html">H O M E</a>
+        <a href="book.html">B O O K</a>
+        <a href="menu.html">M E N U</a>
+        <a href="offers.html">P R O M O T I O N S</a>
+        <a href="references.html">R E F E R E N C E S</a>
+    </div>
+
+    <div class="visible">
+
+    <nav>
+        <!-- hamburger icon for smaller screens hidden in large screens -->
+        <a href="#menu">
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        </a>
+
+        <!-- navigation links for larger screens hidden is small screens -->
+        <div class="hide">
+            <a href="index.html">H O M E</a>
+            <a href="book.html">B O O K</a>
+            <a href="menu.html">M E N U</a>
+            <a href="offers.html">P R O M O T I O N S</a>
+            <a href="references.html">R E F E R E N C E S</a>
+        </div>
+    </nav>
+
+    <!-- Header with a promotional image -->
+    <header></header>
+
+    <!-- Main content area with image cards -->
+    <div class="container">
+
+        <div class="content-box">
+            <img src="Assets/media/bank4.png" alt="Image 1">
+        </div>
+
+        <div class="content-box">
+            <img src="Assets/media/bank2.png" alt="Image 2">
+        </div>
+
+        <div class="content-box">
+            <img src="Assets/media/bank1.png" alt="Image 3">
+        </div>
+
+        <div class="content-box">
+            <img src="Assets/media/bank3.png" alt="Image 4">
+        </div>
+    </div>
+
+    <!-- Footer section -->
+    <footer>
+
+        2024 © Hollywood Films
+        <br> 
+        Lana Kendakji & Sara Hijazi Productions
+        
+       
+    </footer>
+
+    </div>
+
+</body>
+</html>

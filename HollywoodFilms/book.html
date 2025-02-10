@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- Ensures the webpage is responsive and adapts to device width -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Assets/CSS/book_style.css">
+        <title> Book Your Movie</title>
+        <style>
+
+            /* Styling for the header section*/
+            header{
+                width:100%;
+                height:500px;
+                background-image: url("Assets/media/bg2.jpeg");
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                justify-items: center;
+                
+                
+            }
+            /** Class for movie poster images to appear when you click on the buttons to the right*/
+            .emptyimage{
+                height:510px;
+                width:400px;
+                padding-bottom: 70px;
+                background-image: url("Assets/media/emptyimagebg.png");
+                filter:grayscale(100%);
+
+}
+/** Container that has ticket image placed behind the main content of the page, only appears when a button is clicked by bringing it over the main content */
+            .ticketimage{
+                margin:auto;
+                display: none;
+                visibility: hidden;
+                position:absolute;
+                z-index: 1;
+                top:0px;
+                background-color: rgb(255, 255, 255);
+                visibility: hidden;
+                z-index: 1;
+                position: absolute;
+                width: 100vw;
+                height: 3550px;
+                display:flex;
+                flex-direction: column;
+                justify-content: center; 
+                padding-top:150px;
+            }
+
+        
+
+        </style>
+    </head>
+    <body>
+       
+        <!-- Class for main content -->
+        <div class="container"> 
+
+        <!-- Header image-->
+        <header>
+
+        </header>
+
+        <!-- Navigation bar-->
+        <nav>
+            <a href="index.html"> HOME</a>
+            <a href="offers.html"> PROMOTIONS</a>
+            <a href="menu.html"> MENU</a>
+            <a href="references.html"> REFERENCES </a>
+        </nav>
+
+        <h1 class="booknow"> BOOK NOW </h1>
+        
+       
+        <h1 class="select"> SELECT A MOVIE</h1>
+        <div class="selectmovie">
+
+            <!-- Images tagged with IDs that are triggered to appear by the pseudo-class Target -->
+            <div class="emptyimage">
+                <img id="image1" class="image" src="Assets/media/casablanca.png" alt="Casablanca">
+                <img id="image2" class="image" src="Assets/media/breakfast.png" alt="Breakfast at Tiffany's">
+                <img id="image3" class="image" src="Assets/media/getout.png" alt="Get out">
+                <img id="image4" class="image" src="Assets/media/theawfultruth.png" alt="The Awful Truth">
+
+                <img id="image5" class="image" src="Assets/media/rocky.png" alt="Rocky">
+                <img id="image6" class="image" src="Assets/media/blackswan.png" alt="Black Swan">
+                <img id="image7" class="image" src="Assets/media/killbill.png" alt="Kill Bill">
+                <img id="image8" class="image" src="Assets/media/starwars.png" alt="Starwars">
+
+                <img id="image9" class="image" src="Assets/media/invisibleman.png" alt="Invisible Man">
+                <img id="image10" class="image" src="Assets/media/dracula.png" alt="Dracula">
+                <img id="image11" class="image" src="Assets/media/wonderfullife.png" alt="Its a wonderful life">
+                <img id="image12" class="image" src="Assets/media/pulpfiction.png" alt="Pulp fiction">
+            </div>
+
+            <!-- Move buttons, when one is selected the movie poster appears to the left. HREF references the ID of its corresponding image-->
+            <div class="cinema">
+                <div class="cinemarow">
+                    <div class="movie"> <a href="#image1" class="movielink"> Casablanca </a></div>
+                    <div class="movie"> <a href="#image2"class="movielink"> Breakfast at Tiffany's </a></div>
+                </div>
+                <div class="cinemarow">
+                    <div class="movie"> <a href="#image3"class="movielink"> Get out </a></div>
+                    <div class="movie"> <a href="#image4"class="movielink"> The Awful Truth </a></div> 
+                </div>
+
+                <div class="cinemarow">
+                    <div class="movie"> <a href="#image5" class="movielink">Rocky</a></div>
+                    <div class="movie"><a href="#image6" class="movielink"> Black Swan</a></div>
+                </div>
+                <div class="cinemarow">
+                    <div class="movie"> <a href="#image7" class="movielink">Kill Bill: Volume 1</a></div>
+                    <div class="movie"> <a href="#image8" class="movielink">Star Wars: Episode I</a></div> 
+                </div>
+
+                <div class="cinemarow">
+                    <div class="movie"> <a href="#image9" class="movielink">The Invisible Man</a></div>
+                    <div class="movie"><a href="#image10" class="movielink">Dracula</a></div>
+                </div>
+                <div class="cinemarow">
+                    <div class="movie"> <a href="#image11" class="movielink">It's a Wonderful Life</a></div>
+                    <div class="movie"> <a href="#image12" class="movielink">Pulp Fiction</a></div> 
+                </div>
+             </div>
+
+            
+        </div>
+ 
+        <h1 class="select"> SELECT LOCATION </h1>
+        <!-- Select location by enlarging the summary-->
+        <details>
+            <summary> DUBAI FESTIVAL CITY </summary>
+            <h1 class="select" style="font-size: 1.2rem;border-top: 0.1px rgb(71, 71, 71) solid;padding-top:50px;"> SELECT DATE </h1>
+            <div class="week">
+                <!-- a is the initial target, it has a href that points to the id, which makes the id the target and so the pseudo class applies to it-->
+                <a href="#click" id="click" class="date"> <div style="color:gray"> MON</div> <div style="font-size: 1.3rem;"> 25 </div> <div style="color:gray"> NOV</div> </a> 
+                <a href="#click1" id="click1"  class="date"> <div style="color:gray"> TUE</div> <div style="font-size: 1.3rem;"> 26 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click2" id="click2"  class="date"> <div style="color:gray"> WED</div> <div style="font-size: 1.3rem;"> 27 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click3" id="click3"  class="date"> <div style="color:gray"> THU</div> <div style="font-size: 1.3rem;"> 28 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click4" id="click4"  class="date"> <div style="color:gray"> FRI</div> <div style="font-size: 1.3rem;"> 29 </div> <div style="color:gray"> NOV</div> </a >
+
+            </div>
+            <h1 class="select" style="font-size: 1.2rem;"> SELECT TIME </h1>
+            <div class="clock">
+                <a href="#click5" id="click5"  class="time"> 12:00 </a ><a href="#click6" id="click6"  class="time"> 14:00 </a ><a href="#click7" id="click7"  class="time"> 16:30 </a ><a href="#click8" id="click8"  class="time"> 18:00 </a ><a href="#click9" id="click9"  class="time"> 12:00 </a >
+                <a href="#click10" id="click10"  class="time"> 20:30 </a ><a href="#click11" id="click11"  class="time"> 21:30 </a ><a href="#click12" id="click12"  class="time"> 22:00 </a ><a href="#click13" id="click13"  class="time"> 22:30 </a >
+                <a href="#click14" id="click14"  class="time"> 01:30 </a >
+            </div>
+        </details>
+        <details>
+            <summary> DUBAI HILLS </summary>
+            <h1 class="select" style="font-size: 1.2rem;border-top: 0.1px rgb(71, 71, 71) solid;padding-top:50px;"> SELECT DATE </h1>
+            <div class="week">
+                <a href="#click15" id="click15" class="date"> <div style="color:gray"> MON</div> <div style="font-size: 1.3rem;"> 25 </div> <div style="color:gray"> NOV</div> </a> <!-- a is the initial target, it has a href that points to the id, which makes the id the target and so the pseudo class applies to it-->
+                <a href="#click16" id="click16"  class="date"> <div style="color:gray"> TUE</div> <div style="font-size: 1.3rem;"> 26 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click17" id="click17"  class="date"> <div style="color:gray"> WED</div> <div style="font-size: 1.3rem;"> 27 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click18" id="click18"  class="date"> <div style="color:gray"> THU</div> <div style="font-size: 1.3rem;"> 28 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click19" id="click19"  class="date"> <div style="color:gray"> FRI</div> <div style="font-size: 1.3rem;"> 29 </div> <div style="color:gray"> NOV</div> </a >
+
+            </div>
+            <h1 class="select" style="font-size: 1.2rem;"> SELECT TIME </h1>
+            <div class="clock" style="grid-template-columns: repeat(7,auto);">
+                <a href="#click20" id="click20"  class="time"> 10:00 </a ><a href="#click21" id="click21"  class="time"> 12:00 </a ><a href="#click22" id="click22"  class="time"> 13:30 </a ><a href="#click23" id="click23"  class="time"> 15:00 </a >
+                <a href="#click24" id="click24"  class="time"> 19:30 </a ><a href="#click25" id="click25"  class="time"> 20:30 </a ><a href="#click26" id="click26"  class="time"> 22:00 </a >
+                
+            </div>
+        </details>
+        <details>
+            <summary> DUBAI MALL </summary>
+            <h1 class="select" style="font-size: 1.2rem;border-top: 0.1px rgb(71, 71, 71) solid;padding-top:50px;"> SELECT DATE </h1>
+            <div class="week">
+                <a href="#click27" id="click27" class="date"> <div style="color:gray"> MON</div> <div style="font-size: 1.3rem;"> 25 </div> <div style="color:gray"> NOV</div> </a> <!-- a is the initial target, it has a href that points to the id, which makes the id the target and so the pseudo class applies to it-->
+                <a href="#click28" id="click28"  class="date"> <div style="color:gray"> TUE</div> <div style="font-size: 1.3rem;"> 26 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click29" id="click29"  class="date"> <div style="color:gray"> WED</div> <div style="font-size: 1.3rem;"> 27 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click30" id="click30"  class="date"> <div style="color:gray"> THU</div> <div style="font-size: 1.3rem;"> 28 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click31" id="click31"  class="date"> <div style="color:gray"> FRI</div> <div style="font-size: 1.3rem;"> 29 </div> <div style="color:gray"> NOV</div> </a >
+
+            </div>
+            <h1 class="select" style="font-size: 1.2rem;"> SELECT TIME </h1>
+            <div class="clock">
+                <a href="#click32" id="click32"  class="time"> 12:00 </a ><a href="#click33" id="click33"  class="time"> 14:00 </a ><a href="#click34" id="click34"  class="time"> 16:30 </a ><a href="#click35" id="click35"  class="time"> 18:00 </a ><a href="#click36" id="click36"  class="time"> 12:00 </a >
+                <a href="#click37" id="click37"  class="time"> 20:30 </a ><a href="#click38" id="click38"  class="time"> 21:30 </a ><a href="#click39" id="click39"  class="time"> 22:00 </a ><a href="#click40" id="click40"  class="time"> 22:30 </a >
+                <a href="#click43" id="click43"  class="time"> 01:30 </a >
+            </div>
+        </details>
+        <details>
+            <summary> IBN BATTUTA MALL </summary>
+            <h1 class="select" style="font-size: 1.2rem;border-top: 0.1px rgb(71, 71, 71) solid;padding-top:50px;"> SELECT DATE </h1>
+            <div class="week">
+                <a href="#click44" id="click44" class="date"> <div style="color:gray"> MON</div> <div style="font-size: 1.3rem;"> 25 </div> <div style="color:gray"> NOV</div> </a> <!-- a is the initial target, it has a href that points to the id, which makes the id the target and so the pseudo class applies to it-->
+                <a href="#click45" id="click45"  class="date"> <div style="color:gray"> TUE</div> <div style="font-size: 1.3rem;"> 26 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click46" id="click46"  class="date"> <div style="color:gray"> WED</div> <div style="font-size: 1.3rem;"> 27 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click47" id="click47"  class="date"> <div style="color:gray"> THU</div> <div style="font-size: 1.3rem;"> 28 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click48" id="click48"  class="date"> <div style="color:gray"> FRI</div> <div style="font-size: 1.3rem;"> 29 </div> <div style="color:gray"> NOV</div> </a >
+
+            </div>
+            <h1 class="select" style="font-size: 1.2rem;"> SELECT TIME </h1>
+            <div class="clock" style="grid-template-columns: repeat(5,auto);">
+                <a href="#click49" id="click49"  class="time"> 10:30 </a >
+                <a href="#click50" id="click50"  class="time"> 12:00 </a >
+                <a href="#click51" id="click52"  class="time"> 15:30 </a >
+                <a href="#click53" id="click53"  class="time"> 18:00 </a >
+                <a href="#click54" id="click54"  class="time"> 20:00 </a >
+
+                
+            </div>
+        </details>
+        <details>
+            <summary> MALL OF THE EMIRATES </summary>
+            <h1 class="select" style="font-size: 1.2rem;border-top: 0.1px rgb(71, 71, 71) solid;padding-top:50px;"> SELECT DATE </h1>
+            <div class="week">
+                <a href="#click55" id="click55" class="date"> <div style="color:gray"> MON</div> <div style="font-size: 1.3rem;"> 25 </div> <div style="color:gray"> NOV</div> </a> <!-- a is the initial target, it has a href that points to the id, which makes the id the target and so the pseudo class applies to it-->
+                <a href="#click56" id="click56"  class="date"> <div style="color:gray"> TUE</div> <div style="font-size: 1.3rem;"> 26 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click57" id="click57"  class="date"> <div style="color:gray"> WED</div> <div style="font-size: 1.3rem;"> 27 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click58" id="click58"  class="date"> <div style="color:gray"> THU</div> <div style="font-size: 1.3rem;"> 28 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click59" id="click59"  class="date"> <div style="color:gray"> FRI</div> <div style="font-size: 1.3rem;"> 29 </div> <div style="color:gray"> NOV</div> </a >
+
+            </div>
+            <h1 class="select" style="font-size: 1.2rem;"> SELECT TIME </h1>
+            <div class="clock" style="grid-template-columns: repeat(7,auto);">
+                <a href="#click60" id="click60"  class="time"> 10:00 </a ><a href="#click61" id="click61"  class="time"> 12:00 </a ><a href="#click62" id="click62"  class="time"> 13:30 </a ><a href="#click63" id="click63"  class="time"> 15:00 </a >
+                <a href="#click64" id="click64"  class="time"> 19:30 </a ><a href="#click65" id="click65"  class="time"> 20:30 </a ><a href="#click66" id="click66"  class="time"> 22:00 </a >
+                
+            </div>
+        </details>
+        <details style="border-bottom: none;">
+            <summary> MIRDIF CITY CENTRE </summary>
+            <h1 class="select" style="font-size: 1.2rem;border-top: 0.1px rgb(71, 71, 71) solid;padding-top:50px;"> SELECT DATE </h1>
+            <div class="week">
+                <a href="#click67" id="click67" class="date"> <div style="color:gray"> MON</div> <div style="font-size: 1.3rem;"> 25 </div> <div style="color:gray"> NOV</div> </a> <!-- a is the initial target, it has a href that points to the id, which makes the id the target and so the pseudo class applies to it-->
+                <a href="#click68" id="click68"  class="date"> <div style="color:gray"> TUE</div> <div style="font-size: 1.3rem;"> 26 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click69" id="click69"  class="date"> <div style="color:gray"> WED</div> <div style="font-size: 1.3rem;"> 27 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click70" id="click70"  class="date"> <div style="color:gray"> THU</div> <div style="font-size: 1.3rem;"> 28 </div> <div style="color:gray"> NOV</div> </a >
+                <a href="#click71" id="click71"  class="date"> <div style="color:gray"> FRI</div> <div style="font-size: 1.3rem;"> 29 </div> <div style="color:gray"> NOV</div> </a >
+
+            </div>
+            <h1 class="select" style="font-size: 1.2rem;"> SELECT TIME </h1>
+            <div class="clock" style="padding-bottom:50px;border-bottom: 0.1px rgb(71, 71, 71) solid;">
+                <a href="#click72" id="click72"  class="time"> 12:00 </a ><a href="#click73" id="click73"  class="time"> 14:00 </a ><a href="#click74" id="click74"  class="time"> 16:30 </a ><a href="#click75" id="click75"  class="time"> 18:00 </a ><a href="#click76" id="click76"  class="time"> 12:00 </a >
+                <a href="#click77" id="click77"  class="time"> 20:30 </a ><a href="#click78" id="click78"  class="time"> 21:30 </a ><a href="#click79" id="click79"  class="time"> 22:00 </a ><a href="#click80" id="click80"  class="time"> 22:30 </a >
+                <a href="#click81" id="click81"  class="time"> 01:30 </a >
+            </div>
+        </details>
+
+        </details>
+        
+        <h1 class="select"> SELECT SEAT </h1>
+        <!-- Select a seat by clicking on the image. When seat is selected, pseudo-class Target applies a grayscale filter on it. HREF references the ID of the image-->
+        <center> <div class="cinemaroom">
+            <div> <a href="#seat"> <img id="seat" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat1"> <img id="seat1" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat2"> <img id="seat2" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat3"> <img id="seat3" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat4"> <img id="seat4" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat5"> <img id="seat5" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat6"> <img id="seat6" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat7"> <img id="seat7" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat8"> <img id="seat8" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat9"> <img id="seat9" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat10"> <img id="seat10" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat11"> <img id="seat11" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat12"> <img id="seat12" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat13"> <img id="seat13" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat14"> <img id="seat14" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat15"> <img id="seat15" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat16"> <img id="seat16" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat17"> <img id="seat17" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat18"> <img id="seat18" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+            <div> <a href="#seat19"> <img id="seat19" src="Assets/media/seat.png" height="150px" width="150px"> </a> </div>
+
+        </div>
+    
+
+        <!-- Push BOOK NOW for ticket to appear and be brought forward. HREF targets the id of the div class that has the ticket image hidden under the main content page, bringing it forward. Click OK button to go back to booking page-->
+    <div id="ticket" class="ticketimage"> <img  src="Assets/media/ticket.png" width="600px" height="400px"> <br> <a href="book.html" style="border:1px solid black; padding:10px; padding-left:25px;padding-right:25px; text-decoration: none;color:white;border-radius: 3px;background-color: rgb(46, 45, 45);"> OK </a>  </div>
+    <a href="#ticket" style="color:black"> <div class="bookticket">  BOOK TICKET   </div></a> 
+</center>
+
+    </div>
+
+    <footer>
+
+        2024 © Hollywood Films
+        <br> 
+        Lana Kendakji & Sara Hijazi Productions
+        
+       
+    </footer>
+        
+    </body>
+
+</html>
